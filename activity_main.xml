@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF57274">
+
+    <ImageView
+            android:id="@+id/settings"
+            android:layout_width="58dp"
+            android:layout_height="49dp"
+            android:src="@drawable/settings"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="16dp"
+            />
+
+    <ImageButton
+        android:id="@+id/mainscreenbutton1"
+        android:layout_width="400dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="215dp"
+        android:src="@drawable/mainscreenbutton" />
+
+    <ImageButton
+        android:id="@+id/mainscreenbutton2"
+        android:layout_width="400dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="340dp"
+        android:src="@drawable/mainscreenbutton" />
+
+    <ImageButton
+        android:id="@+id/mainscreenbutton3"
+        android:layout_width="400dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="470dp"
+        android:src="@drawable/mainscreenbutton" />
+
+    <ImageButton
+        android:id="@+id/mainscreenbutton4"
+        android:layout_width="400dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="600dp"
+        android:src="@drawable/mainscreenbutton" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:width="400dp"
+        android:height="300dp"
+        android:text="@string/app_name"
+        android:theme="@style/berkshire"/>
+
+
+</RelativeLayout>
