@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Pocket Kitchen</string>
+    <string name="ingredient1">Pasta</string>
+    <string name="ingredient2">Chicken</string>
+    <string name="ingredient3">Tomato sauce</string>
+    <string name="ingredient4">Milk</string>
+    <string name="ingredient5">Parmesan</string>
+    <string name="ingredient6">Mozzarella</string>
+    <string name="ingredient7">White bread</string>
+    <string name="shopping_list_title">Shopping List</string>
+</resources>
