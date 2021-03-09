@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.pocketkitchen.adapter.ItemAdapter
 import com.example.pocketkitchen.data.Datasource
 import com.example.pocketkitchen.databinding.ActivityMainBinding
+import com.example.pocketkitchen.model.ShoppingList
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,21 +25,30 @@ class MainActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
         recyclerView.adapter = ItemAdapter(this, myDataset)
         recyclerView.setHasFixedSize(true)
+        binding.shoppingListAddButton.setOnClickListener { addIngredientToShoppingList(this, recyclerView, myDataset) }
+
+    }
+
+    private fun addIngredientToShoppingList(context: AppCompatActivity, recyclerView: RecyclerView, myDataset:  MutableList<ShoppingList.Ingredient>){
+        myDataset.add(ShoppingList.Ingredient(R.string.ingredient3))
+        recyclerView.adapter = ItemAdapter(context, myDataset)
+    }
+
 //        binding.costOfServiceEditText.setOnKeyListener { view, keyCode, _ ->
 //            handleKeyEvent(
 //                view,
 //                keyCode
 //            )
 //        }
-    }
 
- /*   private fun shopping_list_checked() {
-        val bought = binding.checkbox1.isChecked
 
-        if(bought){
-            Toast.makeText(this, "Ingredient successfully bought!", Toast.LENGTH_SHORT).show()
-        }
-    }*/
+/*   private fun shopping_list_checked() {
+       val bought = binding.checkbox1.isChecked
+
+       if(bought){
+           Toast.makeText(this, "Ingredient successfully bought!", Toast.LENGTH_SHORT).show()
+       }
+   }*/
 
 /*    fun calculateTip() {
         val stringInTextField = binding.costOfServiceEditText.text.toString()
@@ -60,15 +70,15 @@ class MainActivity : AppCompatActivity() {
 
     }*/
 
-    private fun handleKeyEvent(view: View, keyCode: Int): Boolean {
-        if (keyCode == KeyEvent.KEYCODE_ENTER) {
-            // Hide the keyboard
-            val inputMethodManager =
+private fun handleKeyEvent(view: View, keyCode: Int): Boolean {
+    if (keyCode == KeyEvent.KEYCODE_ENTER) {
+        // Hide the keyboard
+        val inputMethodManager =
                 getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
-            return true
-        }
-        return false
+        inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+        return true
     }
+    return false
+}
 
 }

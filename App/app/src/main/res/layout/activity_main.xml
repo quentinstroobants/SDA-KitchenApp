@@ -13,6 +13,14 @@
         android:layout_height="match_parent"
         android:scrollbars="vertical"
         app:layoutManager="LinearLayoutManager" />
+
+    <Button
+        android:id="@+id/shopping_list_add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:layout_marginTop="600dp"
+        android:layout_marginStart="270dp"/>
 </FrameLayout>
 
 <!-- <?xml version="1.0" encoding="utf-8"?>
