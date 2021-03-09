@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pocketkitchen.adapter.ItemAdapter
@@ -26,11 +27,30 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = ItemAdapter(this, myDataset)
         recyclerView.setHasFixedSize(true)
         binding.shoppingListAddButton.setOnClickListener { addIngredientToShoppingList(this, recyclerView, myDataset) }
-
+        binding.shoppingListRemoveButton.setOnClickListener { removeIngredientFromShoppingList(this, recyclerView, myDataset) }
+        binding.shoppingListClearButton.setOnClickListener { clearShoppingList(this, recyclerView, myDataset) }
     }
 
     private fun addIngredientToShoppingList(context: AppCompatActivity, recyclerView: RecyclerView, myDataset:  MutableList<ShoppingList.Ingredient>){
         myDataset.add(ShoppingList.Ingredient(R.string.ingredient3))
+        Toast.makeText(this, "Ingredient added", Toast.LENGTH_SHORT).show()
+        recyclerView.adapter = ItemAdapter(context, myDataset)
+    }
+
+    private fun removeIngredientFromShoppingList(context: AppCompatActivity, recyclerView: RecyclerView, myDataset:  MutableList<ShoppingList.Ingredient>){
+        if(myDataset.size >0){
+            myDataset.removeAt(0)
+            Toast.makeText(this, "Ingredient successfully removed", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "No ingredient to remove!", Toast.LENGTH_SHORT).show()
+        }
+
+        recyclerView.adapter = ItemAdapter(context, myDataset)
+    }
+
+    private fun clearShoppingList(context: AppCompatActivity, recyclerView: RecyclerView, myDataset:  MutableList<ShoppingList.Ingredient>){
+        myDataset.clear()
+        Toast.makeText(this, "Shopping list cleared!", Toast.LENGTH_SHORT).show()
         recyclerView.adapter = ItemAdapter(context, myDataset)
     }
 

@@ -18,9 +18,25 @@
         android:id="@+id/shopping_list_add_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add"
+        android:text="@string/add_shoppinglist"
         android:layout_marginTop="600dp"
         android:layout_marginStart="270dp"/>
+
+    <Button
+        android:id="@+id/shopping_list_remove_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/remove_shoppinglist"
+        android:layout_marginTop="600dp"
+        android:layout_marginStart="50dp"/>
+
+    <Button
+        android:id="@+id/shopping_list_clear_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clear_shoppinglist"
+        android:layout_marginTop="600dp"
+        android:layout_marginStart="160dp"/>
 </FrameLayout>
 
 <!-- <?xml version="1.0" encoding="utf-8"?>

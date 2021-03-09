@@ -8,4 +8,7 @@
     <string name="ingredient6">Mozzarella</string>
     <string name="ingredient7">White bread</string>
     <string name="shopping_list_title">Shopping List</string>
+    <string name="add_shoppinglist">Add</string>
+    <string name="remove_shoppinglist">Remove</string>
+    <string name="clear_shoppinglist">Clear</string>
 </resources>
